@@ -1,0 +1,70 @@
+<br><br><br><br>
+<!DOCTYPE html>
+<html lang="en">
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+<div [ngClass]="['site-wrap']" >
+  <div [ngClass]="['site-section ftco-subscribe-1 site-blocks-cover pb-4']" style="background-image: url('assets/images/bg_1.jpg')">
+    <div [ngClass]="['container']" >
+      <div [ngClass]="['row align-items-end justify-content-center text-center']" >
+        <div [ngClass]="['col-lg-7']" >
+          <h2 [ngClass]="['mb-0']" >{{ Admissions }}</h2>
+          <p>{{AdmissionsAbout }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div [ngClass]="['custom-breadcrumns border-bottom']">
+    <div [ngClass]="['container']">
+      <a routerLink="" routerLinkActive="Active">{{Home}}</a>
+      <span [ngClass]="['mx-3 icon-keyboard_arrow_right']" ></span>
+      <span [ngClass]="['current']" >{{ Admission }}</span>
+    </div>
+  </div>
+  <div [ngClass]="['site-section']">
+    <div [ngClass]="['container']">
+      <div [ngClass]="['row mb-5']">
+        <div [ngClass]="['col-lg-6 mb-lg-0 mb-4']">
+          <img [src]="image" alt="Image"  [ngClass]="['img-fluid']">
+        </div>
+        <div [ngClass]="['col-lg-5 ml-auto align-self-center']" >
+          <h2 [ngClass]="['section-title-underline mb-5']" >
+            <span>{{Requirements}}</span>
+          </h2>
+          <p>
+            {{olim}}
+          </p>
+          <ol  [ngClass]="['ul-check primary list-unstyled']">
+            <li>Accomplished Application Form</li>
+            <li>High School Report Card </li>
+            <li>High School Transcript</li>
+            <li>Certificate of Good Moral Characte</li>
+            <li>2×2 picture</li>
+            <li>1×1 picture</li>
+          </ol>
+        </div>
+      </div>
+      <div [ngClass]="['row']">
+        <div [ngClass]="['col-lg-6 order-1 order-lg-2 mb-4 mb-lg-0']" >
+          <img [src]="image" alt="Image" class="img-fluid">
+        </div>
+        <div [ngClass]="['col-lg-5 mr-auto align-self-center order-2 order-lg-1']" >
+          <h2 [ngClass]="['section-title-underline mb-5']">
+            <span>{{Transferees}}</span>
+          </h2>
+          <p>{{first}}</p>
+          <p>{{second}}</p>
+          <ol [ngClass]="['ul-check primary list-unstyled']" >
+            <li>Accomplished Application Form</li>
+            <li>High School Report Card </li>
+            <li>High School Transcript</li>
+            <li>Certificate of Good Moral Characte</li>
+            <li>2×2 picture</li>
+            <li>1×1 picture</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

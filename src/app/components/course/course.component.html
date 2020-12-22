@@ -1,0 +1,231 @@
+<br><br><br><br>
+<!DOCTYPE html>
+<html lang="en">
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+<div class="site-wrap">
+  <div class="site-section ftco-subscribe-1 site-blocks-cover pb-4" style="background-image: url('assets/images/bg_1.jpg')">
+    <div class="container">
+      <div [ngClass]="['row align-items-end justify-content-center text-center']" >
+        <div [ngClass]="['col-lg-7']" >
+          <h2 [ngClass]="['mb-0']" >{{ Courses }}</h2>
+          <p>{{Lorem}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="custom-breadcrumns border-bottom">
+    <div class="container">
+      <a href="index.html">Home</a>
+      <span class="mx-3 icon-keyboard_arrow_right"></span>
+      <span class="current">Courses</span>
+        <button [ngClass]="['btn', 'btn-primary']" [ngStyle]="{'margin-left': '3em'}"  [class.active]="viewMode == 'course'"><a (click)="viewMode = 'course'">Course</a></button>
+        <button [ngClass]="['btn', 'btn-primary']" [ngStyle]="{'margin-left': '3em'}"  [class.active]="viewMode == 'mycourse'"><a (click)="viewMode ='mycourse'">My Course</a></button>
+    </div>
+  </div>
+
+  <div [ngSwitch]="viewMode">
+    <div *ngSwitchCase="'course'">
+      <div [ngClass]="['site-section']" >
+        <div [ngClass]="['container']">
+          <div [ngClass]="['row']"  >
+            <div [ngClass]="['col-lg-4 col-md-6 mb-4']">
+              <div [ngClass]="['course-1-item']">
+                <figure [ngClass]="['thumnail']">
+                  <a href="#"><img src="assets/images/course_1.jpg" alt="Image" [ngClass]="['img-fluid']"></a>
+                  <div [ngClass]="['price']">$99.00</div>
+                  <div [ngClass]="['category']"><h3>Business</h3></div>
+                </figure>
+                <div class="course-1-content pb-4">
+                  <h2>Easy ways to start targeting</h2>
+                  <div [ngClass]="['rating text-center mb-3']">
+                    <span [ngClass]="['icon-star2 text-warning']"></span>
+                    <span [ngClass]="['icon-star2 text-warning']"></span>
+                    <span [ngClass]="['icon-star2 text-warning']"></span>
+                    <span [ngClass]="['icon-star2 text-warning']"></span>
+                    <span [ngClass]="['icon-star2 text-warning']"></span>
+                  </div>
+                  <p [ngClass]="['desc mb-4']">Easy ways to start targeting.</p>
+                  <p><a routerLink="/course-single" [ngClass]="['btn btn-primary rounded-0 px-4']" >Enroll In This Course</a></p>
+                </div>
+              </div>
+            </div>
+
+            <div [ngClass]="['col-lg-4 col-md-6 mb-4']">
+              <div [ngClass]="['course-1-item']">
+                <figure [ngClass]="['thumnail']">
+                  <a href="#"><img src="assets/images/course_2.jpg" alt="Image" [ngClass]="['img-fluid']"></a>
+                  <div [ngClass]="['price']">$99.00</div>
+                  <div [ngClass]="['category']"><h3>Mobile Application</h3></div>
+                </figure>
+                <div class="course-1-content pb-4">
+                  <h2>How To Create Mobile Apps Using Ionic</h2>
+                  <div [ngClass]="['rating text-center mb-3']">
+                    <span [ngClass]="['icon-star2 text-warning']"></span>
+                    <span [ngClass]="['icon-star2 text-warning']"></span>
+                    <span [ngClass]="['icon-star2 text-warning']"></span>
+                    <span [ngClass]="['icon-star2 text-warning']"></span>
+                    <span [ngClass]="['icon-star2 text-warning']"></span>
+                  </div>
+                  <p [ngClass]="['desc mb-4']">You can create many application.</p>
+                  <p><a routerLink="/course-single" [ngClass]="['btn btn-primary rounded-0 px-4']" >Enroll In This Course</a></p>
+                </div>
+              </div>
+            </div>
+
+            <div [ngClass]="['col-lg-4 col-md-6 mb-4']">
+              <div [ngClass]="['course-1-item']">
+                <figure [ngClass]="['thumnail']">
+                  <a href="#"><img src="assets/images/course_3.jpg" alt="Image" [ngClass]="['img-fluid']"></a>
+                  <div [ngClass]="['price']">$99.00</div>
+                  <div [ngClass]="['category']"><h3>Java Application</h3></div>
+                </figure>
+                <div class="course-1-content pb-4">
+                  <h2>How To Create Mobile Database Using Java</h2>
+                  <div [ngClass]="['rating text-center mb-3']">
+                    <span [ngClass]="['icon-star2 text-warning']"></span>
+                    <span [ngClass]="['icon-star2 text-warning']"></span>
+                    <span [ngClass]="['icon-star2 text-warning']"></span>
+                    <span [ngClass]="['icon-star2 text-warning']"></span>
+                    <span [ngClass]="['icon-star2 text-warning']"></span>
+                  </div>
+                  <p [ngClass]="['desc mb-4']">You can create many database.</p>
+                  <p><a routerLink="/course-single" [ngClass]="['btn btn-primary rounded-0 px-4']" >Enroll In This Course</a></p>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div [ngClass]="['col-lg-4 col-md-6 mb-4']">
+              <div [ngClass]="['course-1-item']">
+                <figure [ngClass]="['thumnail']">
+                  <a href="#"><img src="assets/images/course_4.jpg" alt="Image" [ngClass]="['img-fluid']"></a>
+                  <div [ngClass]="['price']">$99.00</div>
+                  <div [ngClass]="['category']"><h3>Web Application</h3></div>
+                </figure>
+                <div class="course-1-content pb-4">
+                  <h2>How To Create Web Apps Using HTML, CSS, PHP</h2>
+                  <div [ngClass]="['rating text-center mb-3']">
+                    <span [ngClass]="['icon-star2 text-warning']"></span>
+                    <span [ngClass]="['icon-star2 text-warning']"></span>
+                    <span [ngClass]="['icon-star2 text-warning']"></span>
+                    <span [ngClass]="['icon-star2 text-warning']"></span>
+                    <span [ngClass]="['icon-star2 text-warning']"></span>
+                  </div>
+                  <p [ngClass]="['desc mb-4']">You can create many sites.</p>
+                  <p><a routerLink="/course-single" [ngClass]="['btn btn-primary rounded-0 px-4']" >Enroll In This Course</a></p>
+                </div>
+              </div>
+            </div>
+
+            <div [ngClass]="['col-lg-4 col-md-6 mb-4']">
+              <div [ngClass]="['course-1-item']">
+                <figure [ngClass]="['thumnail']">
+                  <a href="#"><img src="assets/images/course_5.jpg" alt="Image" [ngClass]="['img-fluid']"></a>
+                  <div [ngClass]="['price']">$99.00</div>
+                  <div [ngClass]="['category']"><h3> Neuron</h3></div>
+                </figure>
+                <div class="course-1-content pb-4">
+                  <h2>Conscious study of brain function</h2>
+                  <div [ngClass]="['rating text-center mb-3']">
+                    <span [ngClass]="['icon-star2 text-warning']"></span>
+                    <span [ngClass]="['icon-star2 text-warning']"></span>
+                    <span [ngClass]="['icon-star2 text-warning']"></span>
+                    <span [ngClass]="['icon-star2 text-warning']"></span>
+                    <span [ngClass]="['icon-star2 text-warning']"></span>
+                  </div>
+                  <p [ngClass]="['desc mb-4']">Conscious study of brain function.</p>
+                  <p><a routerLink="/course-single" [ngClass]="['btn btn-primary rounded-0 px-4']" >Enroll In This Course</a></p>
+                </div>
+              </div>
+            </div>
+
+            <div [ngClass]="['col-lg-4 col-md-6 mb-4']">
+              <div [ngClass]="['course-1-item']">
+                <figure [ngClass]="['thumnail']">
+                  <a href="#"><img src="assets/images/course_6.jpg" alt="Image" [ngClass]="['img-fluid']"></a>
+                  <div [ngClass]="['price']">$99.00</div>
+                  <div [ngClass]="['category']"><h3>Enginering</h3></div>
+                </figure>
+                <div class="course-1-content pb-4">
+                  <h2>Types of engineers, to be a simple computer engineer.</h2>
+                  <div [ngClass]="['rating text-center mb-3']">
+                    <span [ngClass]="['icon-star2 text-warning']"></span>
+                    <span [ngClass]="['icon-star2 text-warning']"></span>
+                    <span [ngClass]="['icon-star2 text-warning']"></span>
+                    <span [ngClass]="['icon-star2 text-warning']"></span>
+                    <span [ngClass]="['icon-star2 text-warning']"></span>
+                  </div>
+                  <p [ngClass]="['desc mb-4']">To become an engineer, you need to start first.</p>
+                  <p><a routerLink="/course-single" [ngClass]="['btn btn-primary rounded-0 px-4']" >Enroll In This Course</a></p>
+                </div>
+              </div>
+            </div>
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngSwitchCase="'mycourse'">
+      <div [ngClass]="['site-section']">
+        <div [ngClass]="['container']">
+          <div [ngClass]="['row']"  >
+            <div [ngClass]="['aaa']"  style="border: 1px solid black; padding: 30px 10px;">
+              <p style="font-weight: bold">DataBase</p>
+              <p style="float: right; color: #0b0b0b; margin-top: -1.5em; font-size: 3em;">...
+              </p>
+            <p>
+              <img [src]="ww"  [ngClass]="{ 'float-left': 'left' }"  alt="Pineapple" style="width:170px;height:170px;margin-right:15px;">
+                {{aaa}}</p>
+              <button [ngClass]="['btn', 'btn-primary']">Continue</button>
+             </div>
+          </div>
+          <br>
+          <div [ngClass]="['row']"  >
+            <div [ngClass]="['aaa']"  style="border: 1px solid black; padding: 30px 10px;">
+              <p style="font-weight: bold">Java developer</p>
+              <p style="float: right; color: #0b0b0b; margin-top: -1.5em; font-size: 3em;">...
+              </p>
+              <p>
+                <img [src]="ss"  [ngClass]="{ 'float-left': 'left' }"  alt="Pineapple" style="width:170px;height:170px;margin-right:15px;">
+                {{qwerty}}</p>
+              <button [ngClass]="['btn', 'btn-primary']">Continue</button>
+            </div>
+          </div>
+          <br>
+          <div [ngClass]="['row']"  >
+            <div [ngClass]="['aaa']"  style="border: 1px solid black; padding: 30px 10px;">
+              <p style="font-weight: bold">Enginering</p>
+              <p style="float: right; color: #0b0b0b; margin-top: -1.5em; font-size: 3em;">...
+              </p>
+              <p>
+                <img [src]="sss"  [ngClass]="{ 'float-left': 'left' }"  alt="Pineapple" style="width:170px;height:170px;margin-right:15px;">
+                {{enginering}}</p>
+              <button [ngClass]="['btn', 'btn-primary']">Continue</button>
+            </div>
+          </div>
+          <br>
+          <div [ngClass]="['row']"  >
+            <div [ngClass]="['aaa']"  style="border: 1px solid black; padding: 30px 10px;">
+              <p style="font-weight: bold">C++</p>
+              <p style="float: right; color: #0b0b0b; margin-top: -1.5em; font-size: 3em;">...
+              </p>
+              <p>
+                <img [src]="ssss"  [ngClass]="{ 'float-left': 'left' }"  alt="Pineapple" style="width:170px;height:170px;margin-right:15px;">
+                {{text}}</p>
+              <button [ngClass]="['btn', 'btn-primary']">Continue</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngSwitchDefault>Otherwise</div>
+  </div>
+</div>
+</body>
+</html>

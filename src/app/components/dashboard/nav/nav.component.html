@@ -1,0 +1,6 @@
+<div>
+  <button [ngClass]="['btn', 'btn-primary']" mat-button routerLink="/home">Home</button>&nbsp;&nbsp;
+  <button [ngClass]="['btn', 'btn-success']" mat-button *ngIf="!auth.isLoggednIn()" routerLink="/signup">Register</button>&nbsp;&nbsp;
+  <button [ngClass]="['btn', 'btn-success']"  mat-button *ngIf="!auth.isLoggednIn()" routerLink="/signin">Login</button>&nbsp;&nbsp;
+  <button [ngClass]="['btn', 'btn-danger']" mat-button *ngIf="auth.isLoggednIn()" (click)="auth.logout()">Logout</button>
+</div>

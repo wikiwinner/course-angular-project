@@ -1,0 +1,50 @@
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+<div [ngClass]="['site-wrap']">
+  <div [ngClass]="['footer']">
+    <div [ngClass]="['container']">
+      <div [ngClass]="['row']">
+        <div [ngClass]="['col-lg-3']">
+          <p class="mb-4"><img [src]="imageUrl" alt="Image" [ngClass]="['img-fluid']" ></p>
+         <p>
+           {{ about }}
+         </p>
+          <p><a routerLink="/aboutacademy" routerLinkActive="Active">Learn More</a></p>
+        </div>
+        <div [ngClass]="['col-lg-3']">
+          <h3 [ngClass]="['footer-heading']"><span>{{OurCampus}}</span></h3>
+          <ul [ngClass]="['list-unstyled']">
+            <li><a href="#">{{Acedemic}}</a></li>
+            <li><a href="#">{{News}}</a></li>
+            <li><a href="#">{{OurInterns}}</a></li>
+            <li><a href="#">{{OurLeadership}}</a></li>
+            <li><a href="#">{{Careers}}</a></li>
+            <li><a href="#">{{HumanResources}}</a></li>
+          </ul>
+        </div>
+        <div [ngClass]="['col-lg-3']">
+          <h3 [ngClass]="['footer-heading']"><span>{{OurCourses}}</span></h3>
+          <ul [ngClass]="['list-unstyled']">
+            <li><a href="#">{{Programmer}}</a></li>
+            <li><a href="#">{{ScienceEngineering}}</a></li>
+            <li><a href="#">{{ArtsHumanities}}</a></li>
+            <li><a href="#">{{EconomicsFinance}}</a></li>
+            <li><a href="#">{{ComputerScience}}</a></li>
+          </ul>
+        </div>
+        <div [ngClass]="['col-lg-3']">
+          <h3 [ngClass]="['footer-heading']"><span>{{Contact}}</span></h3>
+          <ul [ngClass]="['list-unstyled']">
+            <li><a href="#">{{HelpCenter}}</a></li>
+            <li><a href="#">{{SupportCommunity}}</a></li>
+            <li><a href="#">{{Press}}</a></li>
+            <li><a href="#">{{ShareYourStory}}</a></li>
+            <li><a href="#">{{OurSupporters}}</a></li>
+          </ul>
+        </div>
+      </div>
+      <p>{{ copyrigth }} </p>
+    </div>
+  </div>
+</div>
+<!-- .site-wrap -->
+</body>

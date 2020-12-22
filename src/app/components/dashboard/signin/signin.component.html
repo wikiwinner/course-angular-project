@@ -1,0 +1,16 @@
+<br><br><br><br><br><br>
+<div style="margin-left: 40%">
+<app-nav></app-nav>
+</div>
+<br><br>
+    <div  style="margin-left: 40%;">
+  <form [formGroup]="form" (ngSubmit)="login()">
+        <input style="border-color: black; border-radius: 4px;" matInput type="email" placeholder="Email" formControlName="email" />
+    <br><br>
+        <input style="border-color: black; border-radius: 4px;" matInput type="password" placeholder="Password" formControlName="password" />
+    <br><br>
+    <button mat-raised-button type="submit" [ngClass]="['btn', 'btn-primary']">Login</button>
+  </form>
+<br><br><br><br>
+</div>
+

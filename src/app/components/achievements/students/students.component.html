@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+<p *ngFor="getUsers()"></p>
+<div [ngClass]="['site-wrap']">
+  <div [ngClass]="['site-section']">
+    <div [ngClass]="['container']">
+      <div [ngClass]="['row align-items-end justify-content-center text-center']" >
+        <div [ngClass]="['col-lg-4 mb-5']">
+          <h2  [ngClass]="['section-title-underline mb-5']">
+            <span>{{Ourbestgraduates}}</span>
+          </h2>
+        </div>
+      </div>
+      <div  [ngClass]="['row']" >
+        <div  [ngClass]="['col-lg-4 col-md-6 mb-5 mb-lg-5']" *ngFor="let user of userList" >
+          <div [ngClass]="['feature-1 border person text-center']">
+            <img  [src]="imageUrl" alt="Image" [ngClass]="['img-fluid']">
+            <div [ngClass]="['feature-1-content']">
+              <h2> {{ user.name }} {{ user.surname }}</h2>
+              <span [ngClass]="['position mb-3 d-block']">{{ user.speciality }}</span>
+              <p>{{ user.biography }}</p>
+              <p> <i style="color: red;">{{Age}}</i> {{user.age }} &nbsp; <i style="color: red;">{{Country}}</i>  {{ user.country}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- .site-wrap -->
+</body>
+</html>
+

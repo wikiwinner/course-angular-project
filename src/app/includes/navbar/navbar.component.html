@@ -1,0 +1,83 @@
+
+<div class="site-wrap">
+
+  <div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close mt-3">
+        <span class="icon-close2 js-menu-toggle"></span>
+      </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+  </div>
+
+
+  <div class="py-2 bg-light">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-9 d-none d-lg-block">
+          <a href="#" [ngClass]="['small mr-3']">{{today | date:'short'}} {{today | date:'shortTime'}}</a>
+          <a href="#" [ngClass]="['small mr-3']"><span [ngClass]="['icon-phone2 mr-2']"></span>{{  number}}</a>
+          <a href="#" [ngClass]="['small mr-3']"><span [ngClass]="['icon-envelope-o mr-2']"></span> {{email}} </a>
+          <a routerLink="/dashboard" routerLinkActive="Active" [ngClass]="['small mr-3']"><span [ngClass]="['icon-users']"></span> {{dashboard}} </a>
+        </div>
+        <div class="col-lg-3 text-right">
+          <a routerLink="/login" routerLinkActive="active" class="small mr-3"><span class="icon-unlock-alt"></span> {{login}}</a>
+          <a routerLink="/register" routerLinkActive="active" class="small btn btn-primary px-4 py-2 rounded-0"><span class="icon-users"></span> {{register}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+    <div class="container">
+      <div class="d-flex align-items-center">
+        <div class="site-logo">
+          <a routerLink="" class="d-block">
+            <img src="assets/images/logos.png" alt="Image" class="img-fluid" width="150px;">
+          </a>
+        </div>
+        <div class="mr-auto">
+          <nav class="site-navigation position-relative text-right" role="navigation">
+            <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+
+              <li class="active">
+                <a routerLink="" routerLinkActive="active" class="nav-link text-left">{{Home}}</a>
+              </li>
+
+              <li class="has-children">
+                <a href="#" class="nav-link text-left">{{AboutUs}}</a>
+                <ul class="dropdown">
+                  <li><a routerLink="/aboutteachers" routerLinkActive="active">{{OurTeachers}}</a></li>
+                  <li><a routerLink="/aboutacademy" routerLinkActive="active">{{Ouracademy}}</a></li>
+                </ul>
+              </li>
+              <li>
+                <a routerLink="/admission" routerLinkActive="active" class="nav-link text-left">{{Admissions }}</a>
+              </li>
+              <li>
+                <a routerLink="/course" routerLinkActive="active" class="nav-link text-left">{{Courses}}</a>
+              </li>
+              <li>
+                <a routerLink="/contact" routerLinkActive="active" class="nav-link text-left">{{Contact}}</a>
+              </li>
+              <li>
+                <a routerLink="/achievements" routerLinkActive="active" class="nav-link text-left">{{Achievements}}</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="ml-auto">
+          <div class="social-wrap">
+            <a href="https://www.facebook.com/creatorduman" target="_blank"><span class="icon-facebook"></span></a>&nbsp;
+            <a href="https://twitter.com/wikibloggerr" target="_blank"><span class="icon-twitter"></span></a>&nbsp;
+            <a href="#"><span class="icon-linkedin"></span></a>
+            <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black"><span
+              class="icon-menu h3"></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>

@@ -1,0 +1,28 @@
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+<div [ngClass]="['site-wrap']" >
+  <div [ngClass]="['section-bg style-1']"  style="background-image: url('assets/images/hero_1.jpg');">
+    <div [ngClass]="['container']">
+      <div [ngClass]="['row']">
+        <div [ngClass]="['col-lg-4 col-md-6 mb-5 mb-lg-0']">
+          <span [ngClass]="['icon flaticon-mortarboard']" ></span>
+          <h3>{{OurPhilosophy}}</h3>
+          <button [ngClass]="['btn-buy', 'btn', 'btn-success']"  (click)="toggle()">{{Learmore}} </button>
+          <app-sidebar1 *ngIf="displayChild"></app-sidebar1>
+        </div>
+        <div [ngClass]="['col-lg-4 col-md-6 mb-5 mb-lg-0']">
+          <span [ngClass]="['icon flaticon-mortarboard']" ></span>
+          <h3>{{AcademicsPrinciple}}</h3>
+          <button [ngClass]="['btn-buy', 'btn', 'btn-success']"  (click)="toggle1()">{{Learmore}} </button>
+          <app-sidebar2 *ngIf="displayChild1"></app-sidebar2>
+        </div>
+        <div [ngClass]="['col-lg-4 col-md-6 mb-5 mb-lg-0']">
+          <span [ngClass]="['icon flaticon-mortarboard']" ></span>
+          <h3>{{KeyofSuccess}}</h3>
+          <button [ngClass]="['btn-buy', 'btn', 'btn-success']" (click)="toggle2()">{{Learmore}} </button>
+          <app-sidebar3 *ngIf="displayChild2"></app-sidebar3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>

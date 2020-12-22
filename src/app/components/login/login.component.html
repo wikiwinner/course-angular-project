@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<br><br><br><br><br>
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  <div [ngClass]="['site-wrap']" >
+    <div [ngClass]="['site-section ftco-subscribe-1 site-blocks-cover pb-4']" style="background-image: url('assets/images/bg_1.jpg')">
+      <div [ngClass]="['container']" >
+        <div [ngClass]="['row align-items-end justify-content-center text-center']" >
+          <div [ngClass]="['col-lg-7']" >
+            <h2 [ngClass]="['mb-0']" >{{ Login }}</h2>
+            <p>{{ contactAbout }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div [ngClass]="['custom-breadcrumns border-bottom']">
+      <div [ngClass]="['container']">
+        <a routerLink="" routerLinkActive="Active">{{Home}}</a>
+        <span [ngClass]="['mx-3 icon-keyboard_arrow_right']" ></span>
+        <span [ngClass]="['current']" >{{Logins}}</span>
+      </div>
+    </div>
+  <br><br>
+    <div [ngClass]="['container']" >
+    <div [ngClass]="['row justify-content-center']">
+      <div [ngClass]="['col-md-5']" >
+        <div [ngClass]="['row']">
+          <div [hidden]="submitted">
+            <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+              <div [ngClass]="['form-group col-md-12']">
+                <label for="alterEgo">E-mail:</label>
+                <input type="email" class="form-control" id="alterEgo"
+                       [(ngModel)]="model.alterEgo" name="alterEgo">
+              </div>
+              <div [ngClass]="['form-group col-md-12']">
+                <label for="alterEgo">Password:</label>
+                <input type="password" class="form-control" id="password"
+                       [(ngModel)]="model.password" name="password">
+              </div>
+              <div [ngClass]="[' col-12']">
+                <button type="submit" [ngClass]="['btn btn-primary btn-lg px-5']"  [disabled]="!heroForm.form.valid">Submit</button>&nbsp;
+                <button type="button" [ngClass]="['btn btn-default btn-lg px-5']" (click)="newHero(); heroForm.reset()">New Register</button>
+              </div>
+
+            </form>
+          </div>
+          <div [hidden]="!submitted">
+            <h2>You submitted the following:</h2>
+            <div class="row">
+              <div [ngClass]="['col-xs-3']" >E-mail:</div>&nbsp;
+              <div [ngClass]="['col-xs-9']">{{ model.alterEgo }}</div>
+            </div>
+            <div class="row">
+              <div [ngClass]="['col-xs-3']" >Password:</div>&nbsp;
+              <div [ngClass]="['col-xs-9']" >{{ model.password }}</div>
+            </div>
+            <br>
+            <button [ngClass]="['btn btn-primary']"  (click)="submitted=false">Edit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- .site-wrap -->
+</body>
+</html>
+<br><br>
